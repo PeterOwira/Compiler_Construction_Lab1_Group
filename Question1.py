@@ -4,6 +4,7 @@ def split_sentence(sentence):
     current_word = []
     
     for char in sentence:
+        ## Split the sentence using space
         if char== " ":
             if current_word:
                 words.append(''.join(current_word))
