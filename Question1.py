@@ -1,6 +1,19 @@
 # Function to split a sentence into words
 def split_sentence(sentence):
-    words = sentence.split()
+    words = []
+    current_word = []
+    
+    for char in sentence:
+        if char== " ":
+            if current_word:
+                words.append(''.join(current_word))
+                current_word = []
+        else:
+            current_word.append(char)
+    
+    if current_word:
+        words.append(''.join(current_word))
+
     return words
 
 # Input sentence
