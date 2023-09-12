@@ -5,7 +5,7 @@ def split_sentence(sentence):
     
     for char in sentence:
         ## Split the sentence using space
-        if char== " ":
+        if char == " ":
             if current_word:
                 words.append(''.join(current_word))
                 current_word = []
@@ -17,12 +17,17 @@ def split_sentence(sentence):
 
     return words
 
-# Input sentence
-input_sentence = input("Enter an English sentence: ")
+while True:
+    # Input sentence
+    input_sentence = input("Enter an English sentence (or type 'exit' to quit): ")
 
-# Split the sentence into words
-words = split_sentence(input_sentence)
+    # Check if the user wants to exit
+    if input_sentence.lower() == 'exit':
+        break
 
-# Output individual words on separate lines
-for word in words:
-    print(word)
+    # Split the sentence into words
+    words = split_sentence(input_sentence)
+
+    # Output individual words on separate lines
+    for word in words:
+        print(word)
