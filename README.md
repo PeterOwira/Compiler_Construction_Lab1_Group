@@ -7,11 +7,15 @@ This section prints the individual words taken from the user with each word in i
 Example:
 He is a smart student
 
-> He
-> is
-> a 
-> smart
-> student
+He
+
+is
+
+a
+
+smart
+
+student
 
 ## Task 2
 
